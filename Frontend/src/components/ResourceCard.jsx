@@ -14,7 +14,7 @@ const ResourceCard = ({ resource }) => {
             <div className="relative h-full bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden transform group-hover:-translate-y-2">
 
                 <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-gfg-green via-gfg-ocean to-gfg-navy"></div>
-]
+
                 <div className="flex items-start justify-between mb-4">
                     <div className={`w-14 h-14 bg-linear-to-br ${resource.color} rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                         {React.createElement(resource.icon, { className: "w-7 h-7 text-white" })}

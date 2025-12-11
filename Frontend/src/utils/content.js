@@ -61,7 +61,7 @@ const resourcesData = {
             {
                 title: 'Data Structures Cheat Sheet',
                 description: 'Quick reference guide for time and space complexity of all major data structures and operations.',
-                link: 'https://www.geeksforgeeks.org/overview-of-data-structures-set-1-linear-data-structures/',
+                link: 'https://www.geeksforgeeks.org/gfg-academy/geeksforgeeks-master-sheet-list-of-all-cheat-sheets/#DSACheatSheets',
                 icon: FileCode,
                 color: 'from-gfg-navy to-gfg-blue',
                 tags: ['Cheat Sheet', 'Reference', 'Quick'],
@@ -216,7 +216,7 @@ const resourcesData = {
                     topics: ['Variables & Data Types', 'Functions', 'DOM Manipulation', 'ES6 Features', 'Async JavaScript'],
                     resources: [
                         { name: 'GfG - JavaScript Basics', link: 'https://www.geeksforgeeks.org/javascript/' },
-                        { name: 'GfG - JS Practice', link: 'https://www.geeksforgeeks.org/javascript-exercises/' }
+                        { name: 'GfG - JS Practice', link: 'https://www.geeksforgeeks.org/javascript/practice-javascript-online/' }
                     ]
                 },
                 {
@@ -235,7 +235,7 @@ const resourcesData = {
                     duration: '4-5 weeks',
                     topics: ['Node.js Basics', 'Express Framework', 'REST APIs', 'Authentication', 'File Operations'],
                     resources: [
-                        { name: 'GfG - Node.js Tutorial', link: 'https://www.geeksforgeeks.org/nodejs-tutorial/' },
+                        { name: 'GfG - Node.js Tutorial', link: 'https://www.geeksforgeeks.org/nodejs/' },
                         { name: 'GfG - Express.js', link: 'https://www.geeksforgeeks.org/express-js/' }
                     ]
                 },
@@ -277,7 +277,7 @@ const resourcesData = {
             {
                 title: 'GfG Practice Arena',
                 description: 'Practice problems sorted by difficulty and topic. Participate in weekly contests and climb the leaderboard.',
-                link: 'https://practice.geeksforgeeks.org/',
+                link: 'https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions',
                 icon: Code,
                 color: 'from-gfg-navy to-gfg-blue',
                 tags: ['Practice', 'Contest', 'Problems'],
@@ -383,7 +383,7 @@ const resourcesData = {
                     duration: 'Ongoing',
                     topics: ['Weekly Contests', 'Virtual Contests', 'Upsolving', 'Speed Optimization', 'Debugging Skills'],
                     resources: [
-                        { name: 'GfG Practice Contests', link: 'https://practice.geeksforgeeks.org/contests/' },
+                        { name: 'GfG Practice Contests', link: 'https://www.geeksforgeeks.org/events/rec/gfg-weekly-coding-contest' },
                         { name: 'Company Contests', link: 'https://www.geeksforgeeks.org/company-preparation/' }
                     ]
                 }
@@ -501,7 +501,7 @@ const resourcesData = {
                     duration: '2 weeks',
                     topics: ['SQLite', 'Room Database', 'SharedPreferences', 'Firebase', 'Cloud Storage'],
                     resources: [
-                        { name: 'GfG - Room Database', link: 'https://www.geeksforgeeks.org/android-room-with-a-view/' },
+                        { name: 'GfG - Room Database', link: 'https://www.geeksforgeeks.org/kotlin/overview-of-room-in-android-architecture-components/' },
                         { name: 'Firebase Integration', link: 'https://www.geeksforgeeks.org/firebase-introduction/' }
                     ]
                 },
@@ -511,7 +511,7 @@ const resourcesData = {
                     duration: '1-2 weeks',
                     topics: ['App Signing', 'Play Store Publishing', 'App Store Guidelines', 'Monetization', 'Analytics'],
                     resources: [
-                        { name: 'GfG - Publishing Guide', link: 'https://www.geeksforgeeks.org/how-to-publish-an-android-app-on-google-play-store/' },
+                        { name: 'GfG - Publishing Guide', link: 'https://www.geeksforgeeks.org/android/how-to-publish-your-android-app-on-google-play-store/' },
                         { name: 'App Projects', link: 'https://www.geeksforgeeks.org/android-projects-from-basic-to-advanced-level/' }
                     ]
                 }
@@ -543,7 +543,7 @@ const resourcesData = {
             {
                 title: 'Data Preprocessing & Feature Engineering',
                 description: 'Master data cleaning, normalization, encoding, missing value treatment, and feature transformation techniques.',
-                link: 'https://www.geeksforgeeks.org/data-preprocessing-machine-learning/',
+                link: 'https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering/',
                 icon: Database,
                 color: 'from-gfg-accent-orange to-gfg-accent-yellow',
                 tags: ['Preprocessing', 'EDA', 'Feature Engineering'],
@@ -553,7 +553,7 @@ const resourcesData = {
             {
                 title: 'Supervised Learning Algorithms',
                 description: 'Understand and implement key ML algorithms including Linear Regression, Logistic Regression, SVM, Decision Trees, and Random Forest.',
-                link: 'https://www.geeksforgeeks.org/supervised-learning/',
+                link: 'https://www.geeksforgeeks.org/machine-learning/supervised-machine-learning/',
                 icon: Layers,
                 color: 'from-gfg-accent-purple to-gfg-accent-lime',
                 tags: ['Regression', 'Classification', 'SVM'],
@@ -563,7 +563,7 @@ const resourcesData = {
             {
                 title: 'Neural Networks & Deep Learning',
                 description: 'Introduction to perceptrons, activation functions, backpropagation, ANN architectures, and implementation basics.',
-                link: 'https://www.geeksforgeeks.org/introduction-artificial-neural-networks/',
+                link: 'https://www.geeksforgeeks.org/deep-learning/introduction-deep-learning/',
                 icon: Zap,
                 color: 'from-gfg-green to-gfg-ocean',
                 tags: ['Deep Learning', 'ANN', 'Activation'],
@@ -591,7 +591,7 @@ const resourcesData = {
                     topics: ['Python Basics', 'NumPy', 'Statistics', 'Probability', 'Linear Algebra'],
                     resources: [
                         { name: 'Python Basics – GFG', link: 'https://www.geeksforgeeks.org/python-programming-language/' },
-                        { name: 'Math for ML – GFG', link: 'https://www.geeksforgeeks.org/mathematics-for-machine-learning/' }
+                        { name: 'Math for ML – GFG', link: 'https://www.geeksforgeeks.org/machine-learning/machine-learning-mathematics/' }
                     ]
                 },
                 {
@@ -601,7 +601,7 @@ const resourcesData = {
                     topics: ['EDA', 'Encoding', 'Scaling', 'EDA Plots', 'Feature Selection'],
                     resources: [
                         { name: 'EDA – GFG', link: 'https://www.geeksforgeeks.org/exploratory-data-analysis-in-python/' },
-                        { name: 'Data Preprocessing – GFG', link: 'https://www.geeksforgeeks.org/data-preprocessing-machine-learning/' }
+                        { name: 'Data Preprocessing – GFG', link: 'https://www.geeksforgeeks.org/data-science/data-preprocessing-in-data-mining/' }
                     ]
                 },
                 {
@@ -610,7 +610,7 @@ const resourcesData = {
                     duration: '4–6 weeks',
                     topics: ['Regression', 'Classification', 'Clustering', 'Decision Trees', 'SVM', 'K-Means'],
                     resources: [
-                        { name: 'Supervised Learning – GFG', link: 'https://www.geeksforgeeks.org/supervised-learning/' },
+                        { name: 'Supervised Learning – GFG', link: 'https://www.geeksforgeeks.org/machine-learning/supervised-machine-learning/' },
                         { name: 'Unsupervised Learning – GFG', link: 'https://www.geeksforgeeks.org/unsupervised-learning/' }
                     ]
                 },
@@ -620,7 +620,7 @@ const resourcesData = {
                     duration: '3–4 weeks',
                     topics: ['Cross Validation', 'Bias-Variance', 'Regularization', 'Hyperparameter Tuning'],
                     resources: [
-                        { name: 'Model Evaluation – GFG', link: 'https://www.geeksforgeeks.org/model-evaluation-in-machine-learning/' },
+                        { name: 'Model Evaluation – GFG', link: 'https://www.geeksforgeeks.org/machine-learning/metrics-for-machine-learning-model/' },
                         { name: 'Hyperparameter Tuning – GFG', link: 'https://www.geeksforgeeks.org/hyperparameter-tuning/' }
                     ]
                 },
@@ -630,8 +630,8 @@ const resourcesData = {
                     duration: '4–6 weeks',
                     topics: ['ANN', 'Activation Functions', 'Loss Functions', 'Backpropagation', 'Keras Basics'],
                     resources: [
-                        { name: 'Neural Networks Basics', link: 'https://www.geeksforgeeks.org/introduction-artificial-neural-networks/' },
-                        { name: 'Deep Learning Tutorial', link: 'https://www.geeksforgeeks.org/deep-learning/' }
+                        { name: 'Neural Networks Basics', link: 'https://www.geeksforgeeks.org/machine-learning/neural-networks-a-beginners-guide/' },
+                        { name: 'Deep Learning Tutorial', link: 'https://www.geeksforgeeks.org/deep-learning/introduction-deep-learning/' }
                     ]
                 },
                 {
@@ -641,7 +641,7 @@ const resourcesData = {
                     topics: ['Flask Deployment', 'Streamlit Apps', 'API Creation', 'ML Pipelines'],
                     resources: [
                         { name: 'ML Projects – GFG', link: 'https://www.geeksforgeeks.org/machine-learning-projects/' },
-                        { name: 'Deployment Guide – GFG', link: 'https://www.geeksforgeeks.org/deploying-machine-learning-models/' }
+                        { name: 'Deployment Guide – GFG', link: 'https://www.geeksforgeeks.org/machine-learning/machine-learning-deployment/' }
                     ]
                 }
             ]
@@ -692,7 +692,7 @@ const resourcesData = {
         {
             title: 'Web Application Security',
             description: 'Master OWASP Top 10 vulnerabilities including SQLi, XSS, CSRF, authentication flaws, and security misconfigurations.',
-            link: 'https://www.geeksforgeeks.org/web-application-security/',
+            link: 'https://www.geeksforgeeks.org/software-engineering/securing-web-applications/',
             icon: Code,
             color: 'from-gfg-green to-gfg-ocean',
             tags: ['OWASP', 'Web Security', 'Pentesting'],
@@ -702,7 +702,7 @@ const resourcesData = {
         {
             title: 'CyberSecurity Projects',
             description: 'Real-world projects like keyloggers, port scanners, malware analysis, password strength checkers & secure login systems.',
-            link: 'https://www.geeksforgeeks.org/cyber-security-projects/',
+            link: 'https://www.geeksforgeeks.org/blogs/top-6-cybersecurity-projects-ideas-for-beginners/',
             icon: BookOpen,
             color: 'from-gfg-navy to-gfg-blue',
             tags: ['Projects', 'Pentesting', 'Tools'],
@@ -720,7 +720,7 @@ const resourcesData = {
                 topics: ['CIA Triad', 'Threats', 'Malware Types', 'Security Models'],
                 resources: [
                     { name: 'GfG – Cyber Security Basics', link: 'https://www.geeksforgeeks.org/cyber-security-tutorial/' },
-                    { name: 'GfG – Malware Types', link: 'https://www.geeksforgeeks.org/types-of-malware/' }
+                    { name: 'GfG – Malware Types', link: 'https://www.geeksforgeeks.org/ethical-hacking/malware-and-its-types/' }
                 ]
             },
             {
@@ -730,7 +730,7 @@ const resourcesData = {
                 topics: ['TCP/IP', 'Ports & Protocols', 'Firewalls', 'IDS/IPS', 'Linux Basics'],
                 resources: [
                     { name: 'Network Security – GFG', link: 'https://www.geeksforgeeks.org/network-security/' },
-                    { name: 'Linux Commands – GFG', link: 'https://www.geeksforgeeks.org/category/linux-commands/' }
+                    { name: 'Linux Commands – GFG', link: 'https://www.geeksforgeeks.org/linux-unix/basic-linux-commands/' }
                 ]
             },
             {
@@ -740,7 +740,7 @@ const resourcesData = {
                 topics: ['Encryption', 'Hashing', 'Digital Signatures', 'Certificates', 'OAuth'],
                 resources: [
                     { name: 'Cryptography – GFG', link: 'https://www.geeksforgeeks.org/cryptography-and-its-types/' },
-                    { name: 'Hashing Algorithms', link: 'https://www.geeksforgeeks.org/hash-functions-and-list/types-hashing/' }
+                    { name: 'Hashing Algorithms', link: 'https://www.geeksforgeeks.org/dsa/hash-functions-and-list-types-of-hash-functions/' }
                 ]
             },
             {
@@ -750,7 +750,7 @@ const resourcesData = {
                 topics: ['Reconnaissance', 'Scanning', 'Vulnerability Analysis', 'Metasploit', 'Burp Suite'],
                 resources: [
                     { name: 'Ethical Hacking Tutorial – GFG', link: 'https://www.geeksforgeeks.org/ethical-hacking-tutorial/' },
-                    { name: 'Web App Security — GFG', link: 'https://www.geeksforgeeks.org/web-application-security/' }
+                    { name: 'Web App Security — GFG', link: 'https://www.geeksforgeeks.org/software-engineering/securing-web-applications/' }
                 ]
             },
             {
@@ -759,7 +759,7 @@ const resourcesData = {
                 duration: '6–8 weeks',
                 topics: ['Forensics', 'SIEM', 'Incident Response', 'Reverse Engineering', 'Malware Analysis'],
                 resources: [
-                    { name: 'Incident Response – GFG', link: 'https://www.geeksforgeeks.org/incident-response/' },
+                    { name: 'Incident Response – GFG', link: 'https://www.geeksforgeeks.org/computer-networks/incident-management-in-cyber-security/' },
                     { name: 'Cyber Forensics – GFG', link: 'https://www.geeksforgeeks.org/cyber-forensics/' }
                 ]
             },
@@ -769,8 +769,8 @@ const resourcesData = {
                 duration: 'Ongoing',
                 topics: ['Pentesting Projects', 'CTFs', 'Bug Bounty', 'CEH', 'Security+'],
                 resources: [
-                    { name: 'Cyber Security Projects – GFG', link: 'https://www.geeksforgeeks.org/cyber-security-projects/' },
-                    { name: 'CTF Practice', link: 'https://www.geeksforgeeks.org/capture-the-flag-ctf-challenges/' }
+                    { name: 'Cyber Security Projects – GFG', link: 'https://www.geeksforgeeks.org/blogs/top-6-cybersecurity-projects-ideas-for-beginners/' },
+                    { name: 'CTF Practice', link: 'https://www.geeksforgeeks.org/blogs/top-cyber-hacking-competitions-capture-the-flag-ctf/' }
                 ]
             }
         ]
