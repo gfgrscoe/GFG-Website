@@ -18,8 +18,14 @@ import {
     ChevronRight,
     Sparkles
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
+
+    <Helmet>
+    <title>About Us - GeeksforGeeks Student Chapter @ RSCOE</title>
+    <meta name="description" content="Learn about the GeeksforGeeks Student Chapter at RSCOE, our vision, mission, core values, and journey in building a community of passionate developers." />
+    </Helmet>
 
      useEffect(() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

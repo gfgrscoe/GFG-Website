@@ -15,9 +15,17 @@ import workshopIcon from '../assets/3dworkshop.jpg';
 import greIcon from '../assets/gre.jpg'; 
 import { useNavigate } from 'react-router';
 import GreenByteSection from '../components/GreenByteSection.jsx'; 
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
+
+    <Helmet>
+    <title>GeeksforGeeks Student Chapter - Home</title>
+    <meta name="description" content="Welcome to the official GeeksforGeeks Student Chapter. Join 100+ passionate coders, attend workshops, compete in hackathons, and build projects that matter." />
+    </Helmet>
+
+
     const [isLogoHovered, setIsLogoHovered] = useState(false);
     const navigate = useNavigate();
 

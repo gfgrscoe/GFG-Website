@@ -2,8 +2,14 @@ import React, { useEffect } from 'react';
 import Card from '../components/Card.jsx';
 import { Users, Award, Sparkles, Heart } from 'lucide-react';
 import { facultyCoordinator, coreTeam, teamMembers } from '../utils/team.js';
+import { Helmet } from 'react-helmet';
 
 const Team = () => {
+
+    <Helmet>
+    <title>Team - GeeksforGeeks Student Chapter @ RSCOE</title>
+    <meta name="description" content="Meet the passionate team behind the GeeksforGeeks Student Chapter at RSCOE. Discover our core committee, team leads, and members who drive innovation and organize exciting tech events." />
+    </Helmet>
 
      useEffect(() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

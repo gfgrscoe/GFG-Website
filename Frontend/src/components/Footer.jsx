@@ -27,9 +27,10 @@ const Footer = () => {
     { name: 'Events', to: '/events' },
     { name: 'Team', to: '/team' },
     { name: 'Contact', to: '/contact' },
+    { name: 'Admin Login', to: '/admin/login' },
   ];
 
-   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
 
   const resources = [

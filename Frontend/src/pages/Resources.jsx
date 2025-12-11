@@ -8,8 +8,16 @@ import {
 } from 'lucide-react';
 import { resourcesData } from '../utils/content.js';
 import { useLocation } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const Resources = () => {
+
+
+    <Helmet>
+    <title>Resources & Roadmaps - GeeksforGeeks Student Chapter @ RSCOE</title>
+    <meta name="description" content="Discover curated resources and comprehensive roadmaps from the GeeksforGeeks Student Chapter at RSCOE. Master Data Structures, Web Development, Competitive Programming, App Development, and more with our expertly crafted learning paths." />
+    </Helmet>
+
     const [activeTab, setActiveTab] = useState('DSA');
     const [viewMode, setViewMode] = useState('resources'); 
     const location = useLocation();

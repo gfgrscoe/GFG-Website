@@ -17,8 +17,16 @@ import {
     AlertCircle,
     Navigation
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
+
+
+    <Helmet>
+    <title>Contact Us - GeeksforGeeks Student Chapter @ RSCOE</title>
+    <meta name="description" content="Get in touch with the GeeksforGeeks Student Chapter at RSCOE. Whether you have questions, want to collaborate, or just want to say hi, we're here to connect!" />
+    </Helmet>
+
     // Form state
     const [formData, setFormData] = useState({
         name: '',

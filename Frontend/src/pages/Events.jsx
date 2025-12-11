@@ -4,9 +4,15 @@ import EventModal from '../components/EventModal.jsx';
 import { Calendar, Sparkles, Filter, Search } from 'lucide-react';
 import { useLocation } from 'react-router';
 import { events } from '../utils/events.js';
-
+import { Helmet } from 'react-helmet';
 
 const Events = () => {
+
+  <Helmet>
+    <title>Events & Workshops - GeeksforGeeks Student Chapter @ RSCOE</title>
+    <meta name="description" content="Explore the exciting events and workshops hosted by the GeeksforGeeks Student Chapter at RSCOE. From hackathons to seminars, discover how we bring learning to life!" />
+  </Helmet>
+
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [filterCategory, setFilterCategory] = useState('All');
   const location = useLocation();
