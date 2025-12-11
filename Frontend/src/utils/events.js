@@ -4,7 +4,7 @@ import workshop3d1 from '../assets/3dworkshop1.jpg';
 import workshop3d2 from '../assets/3dworkshop2.jpg';
 import workshop3d3 from '../assets/3dworkshop3.jpg';
 import Researchp from '../assets/Reserachpaper.jpg';
-import Researchp2 from '../assets/Researchp2.jpg';
+import Researchp2 from '../assets/ResearchP2.jpg';
 import grecover from '../assets/grecover.jpg';
 import gre2 from '../assets/gre2.jpg';
 import gre3 from '../assets/gre3.jpg';
