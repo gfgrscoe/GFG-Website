@@ -14,14 +14,13 @@ import researchIcon from '../assets/Reserachpaper.jpg';
 import workshopIcon from '../assets/3dworkshop.jpg';
 import greIcon from '../assets/gre.jpg'; 
 import { useNavigate } from 'react-router';
-import GreenByteSection from '../components/GreenByteSection.jsx'; // ← Import the component
+import GreenByteSection from '../components/GreenByteSection.jsx'; 
 
 
 const Home = () => {
     const [isLogoHovered, setIsLogoHovered] = useState(false);
     const navigate = useNavigate();
 
-    // Stats data
     const stats = [
         { icon: Users, number: '50+', label: 'Active Members', color: 'bg-gfg-green' },
         { icon: Trophy, number: '10+', label: 'Events Hosted', color: 'bg-gfg-navy' },
@@ -29,9 +28,6 @@ const Home = () => {
         { icon: Rocket, number: '10+', label: 'Workshops', color: 'bg-gfg-accent-purple' },
     ];
 
-    // Current week's concept (update this weekly)
-   
-    // Why join reasons
     const whyJoinReasons = [
         {
             icon: Code,
@@ -59,7 +55,6 @@ const Home = () => {
         }
     ];
 
-    // Gallery placeholders
     const galleryImages = [
         { id: 1, title: 'Session on: "How to make Research Papers"', category: 'Event', pic: researchIcon },
         { id: 2, title: '3D App Development Workshop', category: 'Workshop', pic: workshopIcon },
@@ -68,12 +63,11 @@ const Home = () => {
 
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
-            {/* Hero Section */}
+          
             <section className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         
-                        {/* LEFT - Info */}
                         <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left">
                             <h1 className="font-sofia font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-gfg-black leading-tight">
                                 GeeksForGeeks 
@@ -100,7 +94,6 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* RIGHT - Rotating Logo */}
                         <div className="flex justify-center lg:justify-end order-1 lg:order-2">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-linear-to-r from-gfg-green via-gfg-ocean to-gfg-navy rounded-full blur-2xl md:blur-3xl opacity-30 animate-pulse"></div>
@@ -128,7 +121,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Stats Cards */}
             <section className="py-8 md:py-12 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -151,10 +143,8 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Green Byte Section - NOW A SEPARATE COMPONENT! */}
             <GreenByteSection/>
 
-            {/* Why Join the Chapter */}
             <section className="py-12 md:py-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-8 md:mb-12">
@@ -190,7 +180,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Glimpses / Gallery */}
             <section className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-ocean/5">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-8 md:mb-12">

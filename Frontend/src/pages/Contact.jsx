@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Mail,
     Phone,
@@ -34,7 +34,6 @@ const Contact = () => {
         loading: false
     });
 
-    // Handle form input changes
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -42,7 +41,6 @@ const Contact = () => {
         });
     };
 
-    // Handle form submission (connect to your backend)
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus({ submitted: false, error: false, loading: true });
@@ -70,18 +68,20 @@ const Contact = () => {
         }
     };
 
-    // College location - UPDATE THESE COORDINATES
+     useEffect(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, []);
+    
     const collegeLocation = {
         name: 'Rajarshi Shahu College of Engineering (RSCOE)',
         address: 'Tathawade, Pune, Maharashtra 411033',
         coordinates: {
-            lat: 18.6200922,  // UPDATE with actual latitude
-            lng: 73.7471974  // UPDATE with actual longitude
+            lat: 18.6200922,  
+            lng: 73.7471974  
         },
         mapUrl: 'https://www.google.com/maps/place/JSPM+Rajarshi+Shahu+College+Of+Engineering+,+Tathawade/@18.6200922,73.7471974,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bbbc138acb7b:0x67043867a211a31d!8m2!3d18.6200922!4d73.7471974!16s%2Fg%2F11fly22nwc?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D' // UPDATE with actual Google Maps link
     };
 
-    // Contact information
     const contactInfo = [
         {
             icon: Mail,
@@ -113,7 +113,7 @@ const Contact = () => {
         }
     ];
 
-    // Social media links
+    
     const socialLinks = [
         { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/gfg_rscoe', color: 'hover:text-pink-600' },
         { icon: Linkedin, name: 'LinkedIn', url: 'https://linkedin.com/company/gfg-rscoe', color: 'hover:text-blue-600' },
@@ -122,7 +122,7 @@ const Contact = () => {
         { icon: Facebook, name: 'Facebook', url: 'https://facebook.com/gfg.rscoe', color: 'hover:text-blue-700' }
     ];
 
-    // FAQ items
+  
     const faqs = [
         {
             question: 'How can I join the chapter?',
@@ -141,7 +141,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
-            {/* Hero Section */} 
+           
             <section className="pt-32 pb-12 px-4 sm:px-6 relative overflow-hidden">
                 <div className="absolute top-20 right-10 w-72 h-72 bg-gfg-green/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-10 left-10 w-96 h-96 bg-gfg-ocean/10 rounded-full blur-3xl"></div>
@@ -161,7 +161,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Contact Info Cards */}
+          
             <section className="py-12 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -187,12 +187,11 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Main Content: Form + Map */}
+         
             <section className="py-12 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-8">
 
-                        {/* Contact Form */}
                         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-gray-100">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-12 h-12 bg-linear-to-br from-gfg-green to-gfg-ocean rounded-xl flex items-center justify-center">
@@ -202,7 +201,7 @@ const Contact = () => {
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
-                                {/* Name */}
+                             
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Full Name *
@@ -221,7 +220,6 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Email */}
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Email Address *
@@ -240,7 +238,6 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Phone */}
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Phone Number
@@ -258,7 +255,6 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Subject */}
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Subject *
@@ -277,7 +273,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Message */}
+                              
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Your Message *
@@ -293,7 +289,7 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                                {/* Submit Button */}
+                              
                                 <button
                                     type="submit"
                                     disabled={formStatus.loading}
@@ -312,7 +308,6 @@ const Contact = () => {
                                     )}
                                 </button>
 
-                                {/* Success/Error Messages */}
                                 {formStatus.submitted && (
                                     <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-xl">
                                         <CheckCircle className="w-5 h-5 text-green-600" />
@@ -332,11 +327,8 @@ const Contact = () => {
                                 )}
                             </form>
                         </div>
-
-                        {/* Map + Location Info */}
                         <div className="space-y-6">
 
-                            {/* Map Container */}
                             <div className="bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 h-[450px] relative group">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.080024071442!2d73.7446225!3d18.6200922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbbc138acb7b%3A0x67043867a211a31d!2sJSPM%20Rajarshi%20Shahu%20College%20Of%20Engineering%20%2C%20Tathawade!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -350,8 +342,6 @@ const Contact = () => {
                                 ></iframe>
 
 
-
-                                {/* Get Directions Button Overlay */}
                                 <a
                                     href={collegeLocation.mapUrl}
                                     target="_blank"
@@ -363,7 +353,6 @@ const Contact = () => {
                                 </a>
                             </div>
 
-                            {/* Location Details Card */}
                             <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-linear-to-br from-gfg-accent-orange to-gfg-accent-yellow rounded-xl flex items-center justify-center shrink-0">
@@ -389,7 +378,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Social Media Section */}
             <section className="py-12 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="font-sofia font-bold text-3xl sm:text-4xl text-gfg-black mb-4">
@@ -419,7 +407,6 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* FAQ Section */}
             <section className="py-20 px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">

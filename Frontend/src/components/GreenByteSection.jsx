@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Zap, ChevronRight } from 'lucide-react';
-import api from '../api/axiosInstance'; // Import your axios instance
+import api from '../api/axiosInstance'; 
 
 const GreenByteSection = () => {
     const [concept, setConcept] = useState(null);
@@ -25,9 +25,7 @@ const GreenByteSection = () => {
         };
 
         fetchLatestConcept();
-    }, []); // Empty dependency array means this runs once on mount
-
-    // Loading state
+    }, []); 
     if (loading) {
         return (
             <section className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
@@ -42,7 +40,6 @@ const GreenByteSection = () => {
         );
     }
 
-    // Error state
     if (error) {
         return (
             <section className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
@@ -54,8 +51,6 @@ const GreenByteSection = () => {
             </section>
         );
     }
-
-    // No concept available
     if (!concept) {
         return (
             <section className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
@@ -84,7 +79,6 @@ const GreenByteSection = () => {
 
                 <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                     <div className="grid lg:grid-cols-5">
-                        {/* Left side - Info */}
                         <div className="lg:col-span-3 p-6 sm:p-8 lg:p-12">
                             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
                                 <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-gfg-green/10 text-gfg-green font-source font-bold text-xs sm:text-sm rounded-full">
@@ -137,7 +131,6 @@ const GreenByteSection = () => {
                             )}
                         </div>
 
-                        {/* Right side - Code */}
                         {concept.code && (
                             <div className="lg:col-span-2 bg-linear-to-br from-gfg-black to-gfg-navy p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
                                 <div className="flex items-center gap-2 mb-3 sm:mb-4">

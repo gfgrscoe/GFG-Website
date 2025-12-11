@@ -46,13 +46,11 @@ const GreenByteAdmin = () => {
         setStatusType("");
         setLoading(true);
 
-        // Parse key points
         const keyPoints = keyPointsText
             .split("\n")
             .map((l) => l.trim())
             .filter(Boolean);
 
-        // Parse resources into { label, url } format
         const resources = resourcesText
             .split("\n")
             .map((l) => l.trim())
@@ -96,8 +94,6 @@ const GreenByteAdmin = () => {
             setKeyPointsText("");
             setCode("");
             setResourcesText("");
-            // Optional: clear form after success
-            // Reset form fields here if needed
         } catch (err) {
             console.error("Error saving Green Byte:", err);
             setStatusType("error");
@@ -135,7 +131,7 @@ const GreenByteAdmin = () => {
                             </div>
                         </div>
 
-                        {/* Right - Logout Button */}
+                       
                         <button
                             onClick={handleLogout}
                             className="group flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 text-sm font-source text-gray-200 hover:bg-white/10 hover:border-gfg-green transition-all"
@@ -146,14 +142,10 @@ const GreenByteAdmin = () => {
                     </div>
                 </div>
             </header>
-
-            {/* Main Content */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
                 <div className="grid lg:grid-cols-[1.5fr_1fr] gap-6">
 
-                    {/* LEFT - Form Section */}
                     <section className="space-y-6">
-                        {/* Status Message */}
                         {statusMsg && (
                             <div
                                 className={`px-5 py-4 rounded-xl border backdrop-blur-sm animate-slideDown flex items-start gap-3 ${statusType === "success"
@@ -172,7 +164,6 @@ const GreenByteAdmin = () => {
                             </div>
                         )}
 
-                        {/* Form Card */}
                         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                             {/* Card Header */}
                             <div className="bg-gradient-to-r from-gfg-green/20 to-gfg-ocean/20 border-b border-white/10 px-6 py-4">
@@ -181,11 +172,8 @@ const GreenByteAdmin = () => {
                                     Green Byte Details
                                 </h2>
                             </div>
-
-                            {/* Form */}
                             <form onSubmit={handleSubmit} className="p-6 space-y-5 font-source">
 
-                                {/* Week & Category */}
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div>
                                         <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
@@ -218,7 +206,6 @@ const GreenByteAdmin = () => {
                                     </div>
                                 </div>
 
-                                {/* Title */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <Sparkles className="w-4 h-4 text-gfg-green" />
@@ -234,7 +221,6 @@ const GreenByteAdmin = () => {
                                     />
                                 </div>
 
-                                {/* Difficulty */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <Award className="w-4 h-4 text-gfg-green" />
@@ -250,8 +236,6 @@ const GreenByteAdmin = () => {
                                         <option value="Advanced">Advanced</option>
                                     </select>
                                 </div>
-
-                                {/* Description */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <FileText className="w-4 h-4 text-gfg-green" />
@@ -267,7 +251,6 @@ const GreenByteAdmin = () => {
                                     />
                                 </div>
 
-                                {/* Key Points */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <ChevronRight className="w-4 h-4 text-gfg-green" />
@@ -283,7 +266,6 @@ const GreenByteAdmin = () => {
                                     <p className="mt-2 text-xs text-gray-400">Enter one key point per line</p>
                                 </div>
 
-                                {/* Code Snippet */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <Code className="w-4 h-4 text-gfg-green" />
@@ -298,7 +280,6 @@ const GreenByteAdmin = () => {
                                     />
                                 </div>
 
-                                {/* Resources */}
                                 <div>
                                     <label className="flex items-center gap-2 text-sm font-semibold text-gray-200 mb-2">
                                         <Link className="w-4 h-4 text-gfg-green" />
@@ -320,16 +301,13 @@ const GreenByteAdmin = () => {
 
                                 </div>
 
-                                {/* Submit Button */}
                                 <button
                                     type="submit"
                                     disabled={loading}
                                     className="relative w-full sm:w-auto group overflow-hidden mt-6"
                                 >
-                                    {/* Button glow */}
                                     <div className="absolute -inset-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-blue rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity"></div>
 
-                                    {/* Button content */}
                                     <div className="relative px-8 py-3.5 rounded-xl bg-gradient-to-r from-gfg-green to-gfg-ocean text-white font-sofia font-bold shadow-lg transform group-hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
                                         {loading ? (
                                             <>
@@ -344,7 +322,6 @@ const GreenByteAdmin = () => {
                                         )}
                                     </div>
 
-                                    {/* Shimmer effect */}
                                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                                     </div>
@@ -353,10 +330,9 @@ const GreenByteAdmin = () => {
                         </div>
                     </section>
 
-                    {/* RIGHT - Live Preview */}
                     <aside className="hidden lg:block space-y-6 sticky top-24 h-fit">
                         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-                            {/* Preview Header */}
+                         
                             <div className="bg-gradient-to-r from-gfg-ocean/20 to-gfg-blue/20 border-b border-white/10 px-6 py-4">
                                 <h2 className="font-sofia font-bold text-lg text-white flex items-center gap-2">
                                     <Eye className="w-5 h-5 text-gfg-ocean" />
@@ -364,9 +340,7 @@ const GreenByteAdmin = () => {
                                 </h2>
                             </div>
 
-                            {/* Preview Content */}
                             <div className="p-6 space-y-4">
-                                {/* Badges */}
                                 <div className="flex flex-wrap gap-2">
                                     {category && (
                                         <span className="px-3 py-1 bg-gfg-green/10 text-gfg-green border border-gfg-green/30 font-source font-bold text-xs rounded-full">
@@ -385,17 +359,14 @@ const GreenByteAdmin = () => {
                                     )}
                                 </div>
 
-                                {/* Title */}
                                 <h3 className="text-2xl font-sofia font-bold text-white">
                                     {title || "Concept title will appear here"}
                                 </h3>
 
-                                {/* Description */}
                                 <p className="text-sm text-gray-300 font-source leading-relaxed">
                                     {description || "Your concept description will be displayed here. Add a brief explanation to help students understand the topic."}
                                 </p>
 
-                                {/* Key Points */}
                                 {keyPointsText && (
                                     <div className="space-y-2">
                                         <h4 className="font-sofia font-bold text-sm text-white">Key Takeaways:</h4>
@@ -414,7 +385,6 @@ const GreenByteAdmin = () => {
                                     </div>
                                 )}
 
-                                {/* Code Preview */}
                                 {code && (
                                     <div className="bg-black/60 rounded-xl p-4 border border-white/10">
                                         <div className="flex items-center gap-2 mb-3">
@@ -432,7 +402,6 @@ const GreenByteAdmin = () => {
                                     </div>
                                 )}
 
-                                {/* Resources */}
                                 {resourcesText && (
                                     <div className="space-y-2">
                                         <h4 className="font-sofia font-bold text-sm text-white">Resources:</h4>

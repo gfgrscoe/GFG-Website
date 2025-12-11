@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Mail, Lock, Shield, Eye, EyeOff, Sparkles, AlertCircle, LogIn } from "lucide-react";
 import api from "../api/axiosInstance";
-import logo from "../assets/logo.png"; // Import your GfG logo
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -36,34 +35,28 @@ const AdminLogin = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-gfg-black via-gfg-navy to-gfg-black flex items-center justify-center px-4">
-      {/* Animated Background Elements */}
+      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating gradient blobs */}
+  
         <div className="absolute top-20 left-10 w-96 h-96 bg-gfg-green/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-gfg-ocean/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gfg-blue/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         
-        {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
-      {/* Login Card Container */}
       <div className="relative z-10 w-full max-w-md">
-        {/* Glow effect behind card */}
+    
         <div className="absolute -inset-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-blue rounded-3xl blur-xl opacity-30 animate-pulse"></div>
         
-        {/* Main Card */}
+       
         <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden">
-          {/* Top gradient accent */}
+       
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-navy"></div>
 
-          {/* Card Content */}
           <div className="p-8 sm:p-10">
-            {/* Logo & Header */}
             <div className="text-center mb-8">
-              {/* Logo with glow */}
-             
-              {/* Title with badge */}
+       
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gfg-green/20 to-gfg-ocean/20 px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm border border-gfg-green/30">
                 <Shield className="w-4 h-4 text-gfg-green" />
                 <span className="font-source font-semibold text-gfg-green text-sm">Admin Access</span>
@@ -77,7 +70,6 @@ const AdminLogin = () => {
               </p>
             </div>
 
-            {/* Error Alert */}
             {error && (
               <div className="mb-6 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/30 backdrop-blur-sm animate-slideDown">
                 <div className="flex items-start gap-3">
@@ -87,9 +79,8 @@ const AdminLogin = () => {
               </div>
             )}
 
-            {/* Login Form */}
             <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Email Field */}
+          
               <div className="group">
                 <label className="block text-sm font-source font-semibold text-gray-200 mb-2 flex items-center gap-2">
                   <Mail className="w-4 h-4 text-gfg-green" />
@@ -108,7 +99,6 @@ const AdminLogin = () => {
                 </div>
               </div>
 
-              {/* Password Field */}
               <div className="group">
                 <label className="block text-sm font-source font-semibold text-gray-200 mb-2 flex items-center gap-2">
                   <Lock className="w-4 h-4 text-gfg-green" />
@@ -125,7 +115,6 @@ const AdminLogin = () => {
                   />
                   <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   
-                  {/* Toggle password visibility */}
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
@@ -140,16 +129,13 @@ const AdminLogin = () => {
                 </div>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
                 className="relative w-full mt-6 group overflow-hidden"
               >
-                {/* Button glow effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-blue rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                {/* Button content */}
                 <div className="relative px-6 py-3.5 rounded-xl bg-gradient-to-r from-gfg-green to-gfg-ocean text-white font-sofia font-bold shadow-lg transform group-hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
                   {loading ? (
                     <>
@@ -164,15 +150,11 @@ const AdminLogin = () => {
                     </>
                   )}
                 </div>
-
-                {/* Shimmer effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 </div>
               </button>
             </form>
-
-            {/* Footer Note */}
             <div className="mt-8 pt-6 border-t border-white/10">
               <div className="flex items-center justify-center gap-2 text-xs text-gray-400 font-source">
                 <Shield className="w-4 h-4 text-gfg-green" />
@@ -180,13 +162,10 @@ const AdminLogin = () => {
               </div>
             </div>
           </div>
-
-          {/* Bottom decorative corners */}
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-gfg-green/10 to-transparent rounded-tr-full"></div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-gfg-ocean/10 to-transparent rounded-bl-full"></div>
         </div>
 
-        {/* Bottom text */}
        
       </div>
     </div>

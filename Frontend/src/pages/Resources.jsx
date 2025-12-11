@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import ResourceCard from '../components/ResourceCard.jsx';
 import RoadmapSection from '../components/RoadmapSection.jsx';
 import {
@@ -11,7 +11,7 @@ import { useLocation } from 'react-router';
 
 const Resources = () => {
     const [activeTab, setActiveTab] = useState('DSA');
-    const [viewMode, setViewMode] = useState('resources'); // 'resources' or 'roadmap'
+    const [viewMode, setViewMode] = useState('resources'); 
     const location = useLocation();
 
     useEffect(() => {
@@ -28,14 +28,16 @@ const Resources = () => {
 
         if (hash && hashToCategory[hash]) {
             setActiveTab(hashToCategory[hash]);
-            // Smooth scroll to top of content section
             setTimeout(() => {
                 window.scrollTo({ top: 400, behavior: 'smooth' });
             }, 100);
         }
     }, [location.hash]);
 
-    // Category data
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     const categories = [
         { id: 'DSA', name: 'Data Structures & Algorithms', icon: Code, color: 'from-gfg-green to-gfg-ocean' },
         { id: 'WebDev', name: 'Web Development', icon: Globe, color: 'from-gfg-navy to-gfg-blue' },
@@ -45,8 +47,6 @@ const Resources = () => {
         { id: 'CyberSecurity', name: 'Cyber Security', icon: Terminal, color: 'from-gfg-accent-red to-gfg-accent-orange' },
     ];
 
-    // Resources data structure
-
 
     const currentCategory = categories.find(cat => cat.id === activeTab);
     const currentData = resourcesData[activeTab];
@@ -54,9 +54,8 @@ const Resources = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
-            {/* Hero Section */}
             <section className="pt-32 pb-16 px-4 sm:px-6 relative overflow-hidden">
-                {/* Animated blobs */}
+              
                 <div className="absolute top-20 right-10 w-96 h-96 bg-gfg-green/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-10 left-10 w-80 h-80 bg-gfg-ocean/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
@@ -76,7 +75,6 @@ const Resources = () => {
                 </div>
             </section>
 
-            {/* Category Tabs */}
             <section className="py-8 px-4 sm:px-6  top-20 z-30 bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -106,8 +104,6 @@ const Resources = () => {
                     </div>
                 </div>
             </section>
-
-            {/* View Mode Toggle */}
             <section className="py-6 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex items-center justify-between">
@@ -139,7 +135,6 @@ const Resources = () => {
                 </div>
             </section>
 
-            {/* Content Area */}
             <section className="pb-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     {viewMode === 'resources' ? (

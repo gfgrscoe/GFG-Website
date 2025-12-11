@@ -14,10 +14,8 @@ const RoadmapSection = ({ roadmap }) => {
 
     return (
         <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gfg-green via-gfg-ocean to-gfg-navy hidden md:block"></div>
 
-            {/* Steps */}
             <div className="space-y-6">
                 {roadmap.steps.map((step, index) => {
                     const isExpanded = expandedSteps.includes(index);
@@ -25,15 +23,12 @@ const RoadmapSection = ({ roadmap }) => {
 
                     return (
                         <div key={index} className="relative">
-                            {/* Timeline dot */}
                             <div className="absolute left-0 md:left-6 w-4 h-4 mt-2">
                                 <div className={`w-full h-full rounded-full ${isCompleted ? 'bg-gfg-green' : 'bg-white border-2 border-gfg-ocean'} shadow-lg`}></div>
                             </div>
-
-                            {/* Card */}
                             <div className="ml-8 md:ml-14">
                                 <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-                                    {/* Header - Clickable */}
+                                
                                     <button
                                         onClick={() => toggleStep(index)}
                                         className="w-full p-6 text-left flex items-start justify-between hover:bg-gray-50 transition-colors"
@@ -64,7 +59,7 @@ const RoadmapSection = ({ roadmap }) => {
                                         </div>
                                     </button>
 
-                                    {/* Expanded content */}
+                                    
                                     {isExpanded && (
                                         <div className="px-6 pb-6 border-t border-gray-100 animate-slideDown">
                                             {/* Topics */}
@@ -82,7 +77,6 @@ const RoadmapSection = ({ roadmap }) => {
                                                 </div>
                                             )}
 
-                                            {/* Resources */}
                                             {step.resources && (
                                                 <div>
                                                     <h5 className="font-sofia font-bold text-sm text-gfg-black mb-3">Recommended Resources:</h5>

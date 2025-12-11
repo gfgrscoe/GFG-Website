@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import WebWarriorsModal from './WebWarriorsModal.jsx';
+import { contributors } from '../utils/contributors.js';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -27,12 +29,15 @@ const Footer = () => {
     { name: 'Contact', to: '/contact' },
   ];
 
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   const resources = [
     { name: 'DSA Practice', to: '/resources#dsa' },
     { name: 'Web Development', to: '/resources#web' },
     { name: 'Competitive Programming', to: '/resources#cp' },
     { name: 'App Development', to: '/resources#app' },
-    { name: 'Tutorials', to: '/resources/tutorials' },
+    { name: 'Machine Learning', to: '/resources#ml' },
   ];
 
   const events = [
@@ -44,12 +49,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { Icon: Facebook, href: 'https://www.facebook.com', label: 'Facebook', colorVar: 'var(--color-gfg-blue)' },
-    { Icon: Instagram, href: 'https://www.instagram.com', label: 'Instagram', colorVar: '#e4405f' },
-    { Icon: Twitter, href: 'https://www.twitter.com', label: 'Twitter', colorVar: 'var(--color-gfg-blue)' },
-    { Icon: Linkedin, href: 'https://www.linkedin.com', label: 'LinkedIn', colorVar: 'var(--color-gfg-navy)' },
-    { Icon: Github, href: 'https://www.github.com', label: 'GitHub', colorVar: '#333' },
-    { Icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube', colorVar: '#ff0000' },
+    { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61551517804739', label: 'Facebook', colorVar: 'var(--color-gfg-blue)' },
+    { Icon: Instagram, href: 'https://www.instagram.com/gfg.rscoe?igsh=MTJtYWQ2eHVmYW8wdw==', label: 'Instagram', colorVar: '#e4405f' },
+    { Icon: Linkedin, href: 'https://www.linkedin.com/company/geeksforgeeksrscoe/', label: 'LinkedIn', colorVar: 'var(--color-gfg-navy)' },
   ];
 
   const handleSubscribe = (e) => {
@@ -58,7 +60,6 @@ const Footer = () => {
       alert('Please enter a valid email.');
       return;
     }
-    // TODO: connect to your API/endpoint
     alert(`Subscribed with ${email}`);
     setEmail('');
   };
@@ -76,7 +77,6 @@ const Footer = () => {
 
   return (
     <footer
-      // background uses your css variables; the CSS file should already define gradients etc.
       className="text-white"
       style={{
         background: 'linear-gradient(135deg, var(--color-gfg-black) 0%, #081815 40%, #001f33 100%)'
@@ -88,7 +88,6 @@ const Footer = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
 
-          {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-4 mb-6">
               <div className="flex items-center gap-3">
@@ -122,7 +121,6 @@ const Footer = () => {
               Join us in building the tech community of tomorrow.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-3">
               <a
                 href="mailto:gfg.rscoe@gmail.com"
@@ -170,8 +168,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h3
               className="mb-4"
@@ -188,7 +184,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
             <h3
               className="mb-4"
@@ -205,7 +200,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Events */}
           <div>
             <h3
               className="mb-4"
@@ -223,7 +217,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
         <div
           className="mt-12 p-6 sm:p-8 rounded-2xl"
           style={{
@@ -275,7 +268,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media */}
         <div className="mt-12 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center space-x-4">
@@ -314,24 +306,42 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: 'rgba(0,0,0,0.12)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p style={{ fontFamily: 'var(--font-nunito)', color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <p style={{ fontFamily: 'var(--font-nunito)', color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
               © {new Date().getFullYear()} GeeksforGeeks Student Chapter. Made with
-              <Heart className="w-4 h-4" style={{ color: '#ff6b6b', marginLeft: 6 }} />
-              by Tech Team
+              <Heart className="w-4 h-4" style={{ color: '#ff6b6b' }} />
+              by{' '}
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="text-gfg-green hover:text-gfg-ocean transition-colors font-semibold underline decoration-gfg-green/30 hover:decoration-gfg-ocean/50 underline-offset-2 cursor-pointer"
+              >
+                Web Warriors
+              </button>
+              .
             </p>
             <div className="flex gap-6">
-              <NavLink to="/privacy" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">Privacy Policy</NavLink>
-              <NavLink to="/terms" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">Terms of Service</NavLink>
-              <NavLink to="/cookies" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">Cookie Policy</NavLink>
+              <NavLink to="/" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">
+                Privacy Policy
+              </NavLink>
+              <NavLink to="/" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">
+                Terms of Service
+              </NavLink>
+              <NavLink to="/" style={{ color: 'rgba(255,255,255,0.65)' }} className="hover:text-gfg-ocean transition-colors">
+                Cookie Policy
+              </NavLink>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+      <WebWarriorsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        contributors={contributors}
+      />
+    </footer >
   );
 };
 

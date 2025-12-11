@@ -4,7 +4,7 @@ import { X, Calendar, Users, MapPin, Clock, Target, Lightbulb, Award, Image as I
 const EventModal = ({ event, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
-   
+
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => {
@@ -30,15 +30,12 @@ const EventModal = ({ event, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
-            {/* Backdrop */}
-            <div 
+            <div
                 className="absolute inset-0 bg-gfg-black/80 backdrop-blur-sm"
                 onClick={onClose}
             ></div>
-
-            {/* Modal Content */}
             <div className="relative bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto animate-slideUp">
-                {/* Close button */}
+            
                 <button
                     onClick={onClose}
                     className="absolute top-6 right-6 z-20 w-12 h-12 bg-white/90 backdrop-blur-sm hover:bg-red-500 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg group"
@@ -46,15 +43,13 @@ const EventModal = ({ event, onClose }) => {
                     <X className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
                 </button>
 
-                {/* Hero Image */}
                 <div className="relative h-80 overflow-hidden rounded-t-3xl">
-                    <div 
+                    <div
                         className="absolute inset-0 bg-cover bg-center"
                         style={{ backgroundImage: `url(${event.thumbnail})` }}
                     ></div>
                     <div className="absolute inset-0 bg-linear-to-t from-gfg-black via-gfg-black/50 to-transparent"></div>
 
-                    {/* Title overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                         <div className="flex items-center gap-3 mb-3">
                             <span className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full font-sofia font-bold text-white text-sm">
@@ -84,9 +79,7 @@ const EventModal = ({ event, onClose }) => {
                     </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-8 lg:p-12">
-                    {/* Summary */}
                     <div className="mb-10">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-12 h-12 bg-linear-to-br from-gfg-green to-gfg-ocean rounded-xl flex items-center justify-center">
@@ -99,7 +92,6 @@ const EventModal = ({ event, onClose }) => {
                         </p>
                     </div>
 
-                    {/* Objectives */}
                     <div className="mb-10">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-12 h-12 bg-linear-to-br from-gfg-navy to-gfg-blue rounded-xl flex items-center justify-center">
@@ -119,7 +111,6 @@ const EventModal = ({ event, onClose }) => {
                         </div>
                     </div>
 
-                    {/* Highlights */}
                     <div className="mb-10">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-12 h-12 bg-linear-to-br from-gfg-accent-orange to-gfg-accent-yellow rounded-xl flex items-center justify-center">
@@ -137,25 +128,21 @@ const EventModal = ({ event, onClose }) => {
                         </div>
                     </div>
 
-                    {/* Gallery */}
-                    <div className="mb-6">
+                    <div className="mb-10">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-12 h-12 bg-linear-to-br from-gfg-accent-purple to-gfg-accent-lime rounded-xl flex items-center justify-center">
                                 <ImageIcon className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="font-sofia font-bold text-2xl text-gfg-black">Event Gallery</h3>
                         </div>
-                    
 
-                        {/* Main image viewer */}
                         <div className="relative mb-4 rounded-2xl overflow-hidden shadow-2xl group">
-                            <img 
-                                src={event.gallery[currentImageIndex]} 
+                            <img
+                                src={event.gallery[currentImageIndex]}
                                 alt={`Gallery ${currentImageIndex + 1}`}
-                                className="w-full h-96 object-cover"
+                                className="w-full h-auto object-contain bg-gray-100"
                             />
 
-                            {/* Navigation buttons */}
                             {event.gallery.length > 1 && (
                                 <>
                                     <button
@@ -173,7 +160,6 @@ const EventModal = ({ event, onClose }) => {
                                 </>
                             )}
 
-                            {/* Image counter */}
                             <div className="absolute bottom-4 right-4 px-4 py-2 bg-gfg-black/80 backdrop-blur-sm rounded-full">
                                 <span className="font-source text-white text-sm">
                                     {currentImageIndex + 1} / {event.gallery.length}
@@ -181,28 +167,24 @@ const EventModal = ({ event, onClose }) => {
                             </div>
                         </div>
 
-                        {/* Thumbnail strip */}
                         <div className="flex gap-3 overflow-x-auto pb-2">
                             {event.gallery.map((img, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => setCurrentImageIndex(idx)}
-                                    className={`shrink-0 w-24 h-24 rounded-xl overflow-hidden border-4 transition-all ${
-                                        idx === currentImageIndex 
-                                            ? 'border-gfg-green shadow-lg scale-105' 
+                                    className={`shrink-0 w-24 h-24 rounded-xl overflow-hidden border-4 transition-all ${idx === currentImageIndex
+                                            ? 'border-gfg-green shadow-lg scale-105'
                                             : 'border-transparent opacity-60 hover:opacity-100'
-                                    }`}
+                                        }`}
                                 >
                                     <img src={img} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" />
                                 </button>
                             ))}
                         </div>
                     </div>
-
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-2">
                         {event.tags.map((tag, idx) => (
-                            <span 
+                            <span
                                 key={idx}
                                 className="px-4 py-2 bg-linear-to-r from-gfg-green/10 to-gfg-ocean/10 text-gfg-green font-source font-semibold text-sm rounded-full"
                             >

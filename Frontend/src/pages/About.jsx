@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
     Code, 
     Users, 
@@ -21,12 +21,14 @@ import {
 
 const About = () => {
 
-    // Mission and Vision from official document
+     useEffect(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, []);
+
     const visionStatement = "To build a future-ready student developer community by fostering excellence in problem-solving, modern software development, and collaborative learning.";
 
     const missionStatement = "To deliver high-impact technical sessions, hands-on workshops, real-world projects, and leadership opportunities that empower every student to grow as a skilled, confident, and industry-ready engineer.";
 
-    // Core Values
     const coreValues = [
         {
             icon: Code,
@@ -54,7 +56,6 @@ const About = () => {
         }
     ];
 
-    // What We Do
     const activities = [
         {
             icon: BookOpen,
@@ -94,7 +95,6 @@ const About = () => {
         }
     ];
 
-    // Achievements/Milestones
     const milestones = [
         { year: '2023', event: 'Chapter Established', description: 'Official GfG Student Chapter launched at RSCOE' },
         { year: '2024', event: '50+ Members', description: 'Growing community of passionate developers' },
@@ -105,9 +105,7 @@ const About = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
-            {/* Hero Section */}
             <section className="pt-32 pb-20 px-4 sm:px-6 relative overflow-hidden">
-                {/* Background decorations */}
                 <div className="absolute top-20 right-10 w-72 h-72 bg-gfg-green/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-10 left-10 w-96 h-96 bg-gfg-ocean/10 rounded-full blur-3xl"></div>
 
@@ -128,7 +126,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* About GeeksforGeeks */}
             <section className="py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -182,7 +179,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* About GfG RSCOE Chapter */}
             <section className="py-20 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
@@ -227,12 +223,10 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Vision & Mission */}
             <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-8">
 
-                        {/* Vision */}
                         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all group">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-14 h-14 bg-linear-to-br from-gfg-green to-gfg-ocean rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -245,7 +239,6 @@ const About = () => {
                             </p>
                         </div>
 
-                        {/* Mission */}
                         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all group">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-14 h-14 bg-linear-to-br from-gfg-navy to-gfg-blue rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
@@ -261,7 +254,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Core Values */}
             <section className="py-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
@@ -298,8 +290,6 @@ const About = () => {
             </section>
 
          
-
-            {/* Milestones Timeline */}
             <section className="py-20 px-4 sm:px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
@@ -312,7 +302,6 @@ const About = () => {
                     </div>
 
                     <div className="relative">
-                        {/* Timeline line */}
                         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-gfg-green via-gfg-ocean to-gfg-navy hidden md:block"></div>
 
                         <div className="space-y-12">

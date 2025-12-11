@@ -21,14 +21,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdowns when route changes
+
   useEffect(() => {
     setActiveDropdown(null);
     setIsOpen(false);
     setMobileDropdown(null);
   }, [location.pathname]);
 
-  // Click outside to close desktop dropdown
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -75,7 +75,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 
-          {/* LOGO - big, floating, no box */}
+       
           <NavLink to="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
@@ -90,14 +90,12 @@ const Navbar = () => {
             </div>
           </NavLink>
 
-          {/* Desktop Navigation */}
+         
           <div className="hidden lg:flex items-center space-x-1" ref={dropdownRef}>
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
-                {/* If link has dropdown: show NavLink for navigation and separate chevron button for toggle */}
                 {link.dropdown ? (
                   <div className="flex items-center">
-                    {/* Parent link navigates to parent route */}
                     <NavLink
                       to={link.href}
                       className={({ isActive }) =>
@@ -106,17 +104,15 @@ const Navbar = () => {
                         }`
                       }
                       onClick={() => {
-                        // Clicking the text should close dropdown (since user navigates)
                         setActiveDropdown(null);
                       }}
                     >
                       {link.name}
                     </NavLink>
 
-                    {/* Chevron toggle (separate) */}
+                 
                     <button
                       onClick={(e) => {
-                        // prevent NavLink click when chevron clicked
                         e.stopPropagation();
                         setActiveDropdown(activeDropdown === link.name ? null : link.name);
                       }}
@@ -130,7 +126,6 @@ const Navbar = () => {
                     </button>
                   </div>
                 ) : (
-                  // No dropdown -> normal NavLink
                   <NavLink
                     to={link.href}
                     className={({ isActive }) =>
@@ -143,10 +138,9 @@ const Navbar = () => {
                   </NavLink>
                 )}
 
-                {/* Desktop Dropdown Menu */}
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-100 animate-fadeIn">
-                    {/* Optional header linking to parent route for clarity */}
+                   
                     <NavLink
                       to={link.href}
                       className="block px-4 py-2 text-sm font-source text-gfg-navy hover:bg-[#f7faf8]"
@@ -177,7 +171,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+         
           <div className="hidden lg:flex items-center space-x-4">
             <button
               onClick={() => navigate('https://chat.whatsapp.com/JXUbInxZza2Cno35TdSyjT?mode=hqrt1')}
@@ -187,11 +181,10 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              // close desktop dropdowns when opening mobile
               setActiveDropdown(null);
             }}
             className="lg:hidden p-2 rounded-lg text-gfg-black hover:bg-[#f1f8f5] transition-colors"
@@ -232,7 +225,6 @@ const Navbar = () => {
 
                     {mobileDropdown === link.name && (
                       <div id={`${link.name}-mobile-dropdown`} className="ml-4 mt-1 space-y-1">
-                        {/* optional parent link */}
                         <NavLink
                           to={link.href}
                           className="block px-4 py-2 text-sm font-source text-gray-700 hover:text-gfg-green"
