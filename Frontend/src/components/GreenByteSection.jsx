@@ -62,7 +62,7 @@ const GreenByteSection = () => {
     }
 
     return (
-        <section className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
+        <section id='green-byte' className="py-12 md:py-20 px-4 sm:px-6 bg-linear-to-br from-gfg-green/5 via-white to-gfg-navy/5">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-8 md:mb-12">
                     <div className="inline-flex items-center gap-2 bg-gfg-green px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4">
