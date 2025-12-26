@@ -123,11 +123,9 @@ const Contact = () => {
 
     
     const socialLinks = [
-        { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/gfg_rscoe', color: 'hover:text-pink-600' },
-        { icon: Linkedin, name: 'LinkedIn', url: 'https://linkedin.com/company/gfg-rscoe', color: 'hover:text-blue-600' },
-        { icon: Twitter, name: 'Twitter', url: 'https://twitter.com/gfg_rscoe', color: 'hover:text-blue-400' },
-        { icon: Github, name: 'GitHub', url: 'https://github.com/gfg-rscoe', color: 'hover:text-gray-900' },
-        { icon: Facebook, name: 'Facebook', url: 'https://facebook.com/gfg.rscoe', color: 'hover:text-blue-700' }
+        { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/gfg.rscoe/?igsh=MTJtYWQ2eHVmYW8wdw%3D%3D#', color: 'hover:text-pink-600' },
+        { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/company/geeksforgeeksrscoe/', color: 'hover:text-blue-600' },
+        { icon: Facebook, name: 'Facebook', url: 'https://www.facebook.com/people/GfGRSCOE/61551517804739/', color: 'hover:text-blue-700' }
     ];
 
   
