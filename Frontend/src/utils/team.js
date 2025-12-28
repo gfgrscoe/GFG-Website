@@ -6,6 +6,7 @@ import designlead from '../assets/designlead.jpg';
 import techlead from '../assets/techlead.jpg';
 import eventlead from '../assets/eventlead.jpg';
 import prlead from '../assets/prlead.webp';
+import Tresurer from '../assets/Tresurer.jpg'
 
 
   export const facultyCoordinator = {
@@ -45,15 +46,15 @@ import prlead from '../assets/prlead.webp';
             linkedin: 'https://linkedin.com/in/sanket-mandwal-7793a72a3/',
             instagram: 'https://www.instagram.com/sanketmandwal45?igsh=MTgzaGV6M3NuYmdkZQ=='
         },
-        // {
-        //     name: 'Sneha Desai',
-        //     position: 'Treasurer',
-        //     photo: 'https://via.placeholder.com/150',
-        //     tagline: 'Managing resources wisely',
-        //     github: 'https://github.com/sneha',
-        //     linkedin: 'https://linkedin.com/in/sneha',
-        //     instagram: 'https://instagram.com/sneha'
-        // }
+        {
+            name: 'Rushikesh Gajanan Bobade',
+            position: 'Treasurer',
+            photo: {Tresurer},
+            tagline: 'Managing resources wisely',
+            github: 'https://github.com/rushikesh-bobade',
+            linkedin: 'https://www.linkedin.com/in/rushikesh-bobade-96a69429b/',
+            instagram: 'https://instagram.com/rushikesh'
+        }
     ];
 
 
