@@ -49,7 +49,7 @@ import Tresurer from '../assets/Tresurer.jpg'
         {
             name: 'Rushikesh Gajanan Bobade',
             position: 'Treasurer',
-            photo: {Tresurer},
+            photo: Tresurer,
             tagline: 'Managing resources wisely',
             github: 'https://github.com/rushikesh-bobade',
             linkedin: 'https://www.linkedin.com/in/rushikesh-bobade-96a69429b/',
