@@ -7,20 +7,20 @@ import { Helmet } from 'react-helmet';
 const Team = () => {
 
     <Helmet>
-    <title>Team - GeeksforGeeks Student Chapter @ RSCOE</title>
-    <meta name="description" content="Meet the passionate team behind the GeeksforGeeks Student Chapter at RSCOE. Discover our core committee, team leads, and members who drive innovation and organize exciting tech events." />
+        <title>Team - GeeksforGeeks Campus Body @ RSCOE</title>
+        <meta name="description" content="Meet the passionate team behind the GeeksforGeeks Campus Body at RSCOE. Discover our core committee, team leads, and members who drive innovation and organize exciting tech events." />
     </Helmet>
 
-     useEffect(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, []);
-  
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
 
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
             <section className="pt-32 pb-12 px-4 sm:px-6 relative overflow-hidden">
-              
+
                 <div className="absolute top-20 right-10 w-72 h-72 bg-gfg-green/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-10 left-10 w-96 h-96 bg-gfg-ocean/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
@@ -33,17 +33,17 @@ const Team = () => {
                     <h1 className="font-sofia font-bold text-4xl sm:text-5xl lg:text-6xl text-gfg-black mb-6 leading-tight">
                         The Minds Behind
                         <span className="block bg-linear-to-r from-gfg-green via-gfg-ocean to-gfg-navy bg-clip-text text-transparent">
-                            GfG Student Chapter
+                            GfG Campus Body
                         </span>
                     </h1>
 
                     <p className="font-source text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        Meet the passionate individuals driving innovation, organizing events, 
+                        Meet the passionate individuals driving innovation, organizing events,
                         and building a thriving tech community at RSCOE.
                     </p>
                 </div>
             </section>
-{/* 
+            {/* 
             <section className="py-12 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="relative group">
@@ -136,7 +136,7 @@ const Team = () => {
                         ))}
                     </div>
 
-                 
+
                 </div>
             </section>
 

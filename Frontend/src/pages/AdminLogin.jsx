@@ -35,28 +35,28 @@ const AdminLogin = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-gfg-black via-gfg-navy to-gfg-black flex items-center justify-center px-4">
-      
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  
+
         <div className="absolute top-20 left-10 w-96 h-96 bg-gfg-green/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-gfg-ocean/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gfg-blue/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        
+
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
       <div className="relative z-10 w-full max-w-md">
-    
+
         <div className="absolute -inset-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-blue rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-        
-       
+
+
         <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden">
-       
+
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-navy"></div>
 
           <div className="p-8 sm:p-10">
             <div className="text-center mb-8">
-       
+
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gfg-green/20 to-gfg-ocean/20 px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm border border-gfg-green/30">
                 <Shield className="w-4 h-4 text-gfg-green" />
                 <span className="font-source font-semibold text-gfg-green text-sm">Admin Access</span>
@@ -66,7 +66,7 @@ const AdminLogin = () => {
                 Welcome Back
               </h1>
               <p className="text-sm text-gray-300 font-source">
-                Sign in to manage your GfG Student Chapter
+                Sign in to manage your GfG Campus Body
               </p>
             </div>
 
@@ -80,7 +80,7 @@ const AdminLogin = () => {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-5">
-          
+
               <div className="group">
                 <label className="block text-sm font-source font-semibold text-gray-200 mb-2 flex items-center gap-2">
                   <Mail className="w-4 h-4 text-gfg-green" />
@@ -114,7 +114,7 @@ const AdminLogin = () => {
                     placeholder="••••••••"
                   />
                   <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  
+
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
@@ -135,7 +135,7 @@ const AdminLogin = () => {
                 className="relative w-full mt-6 group overflow-hidden"
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-gfg-green via-gfg-ocean to-gfg-blue rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative px-6 py-3.5 rounded-xl bg-gradient-to-r from-gfg-green to-gfg-ocean text-white font-sofia font-bold shadow-lg transform group-hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2">
                   {loading ? (
                     <>
@@ -166,7 +166,7 @@ const AdminLogin = () => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-gfg-ocean/10 to-transparent rounded-bl-full"></div>
         </div>
 
-       
+
       </div>
     </div>
   );

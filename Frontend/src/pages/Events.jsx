@@ -9,8 +9,8 @@ import { Helmet } from 'react-helmet';
 const Events = () => {
 
   <Helmet>
-    <title>Events & Workshops - GeeksforGeeks Student Chapter @ RSCOE</title>
-    <meta name="description" content="Explore the exciting events and workshops hosted by the GeeksforGeeks Student Chapter at RSCOE. From hackathons to seminars, discover how we bring learning to life!" />
+    <title>Events & Workshops - GeeksforGeeks Campus Body @ RSCOE</title>
+    <meta name="description" content="Explore the exciting events and workshops hosted by the GeeksforGeeks Campus Body at RSCOE. From hackathons to seminars, discover how we bring learning to life!" />
   </Helmet>
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -39,8 +39,8 @@ const Events = () => {
     scrollTo(0, 0);
   }, []);
 
-  
-  
+
+
 
 
   const categories = ['All', 'Workshop', 'Hackathon', 'Seminar', 'Contest'];
@@ -95,8 +95,8 @@ const Events = () => {
                   key={category}
                   onClick={() => setFilterCategory(category)}
                   className={`px-6 py-2.5 rounded-full font-sofia font-bold text-sm transition-all duration-300 ${filterCategory === category
-                      ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg shadow-gfg-green/30'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg shadow-gfg-green/30'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
                   {category}
@@ -125,7 +125,7 @@ const Events = () => {
             ))}
           </div>
 
-         
+
           {filteredEvents.length === 0 && (
             <div className="text-center py-20">
               <Calendar className="w-20 h-20 text-gray-300 mx-auto mb-4" />
@@ -136,7 +136,7 @@ const Events = () => {
         </div>
       </section>
 
-     
+
       {selectedEvent && (
         <EventModal
           event={selectedEvent}

@@ -108,7 +108,7 @@ const Footer = () => {
                     className="text-sm"
                     style={{ fontFamily: 'var(--font-source)', color: 'var(--color-gfg-ocean)' }}
                   >
-                    Student Chapter
+                    Campus Body
                   </p>
                 </div>
               </div>
@@ -312,7 +312,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p style={{ fontFamily: 'var(--font-nunito)', color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              © {new Date().getFullYear()} GeeksforGeeks Student Chapter. Made with
+              © {new Date().getFullYear()} GeeksforGeeks Campus Body. Made with
               <Heart className="w-4 h-4" style={{ color: '#ff6b6b' }} />
               by{' '}
               <button

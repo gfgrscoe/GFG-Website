@@ -28,7 +28,7 @@ const Navbar = () => {
     setMobileDropdown(null);
   }, [location.pathname]);
 
-  
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -68,14 +68,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 
-       
+
           <NavLink to="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
@@ -86,11 +85,11 @@ const Navbar = () => {
               <h1 className="font-sofia font-bold text-gfg-black text-2xl leading-tight">
                 GeeksforGeeks
               </h1>
-              <p className="font-source text-gfg-navy text-sm">Student Chapter</p>
+              <p className="font-source text-gfg-navy text-sm">Campus Body</p>
             </div>
           </NavLink>
 
-         
+
           <div className="hidden lg:flex items-center space-x-1" ref={dropdownRef}>
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
@@ -99,8 +98,7 @@ const Navbar = () => {
                     <NavLink
                       to={link.href}
                       className={({ isActive }) =>
-                        `px-4 py-2 rounded-lg font-source font-semibold transition-all duration-200 flex items-center gap-1 ${
-                          isActive ? 'text-gfg-green bg-[#f1f8f5]' : 'text-gfg-black hover:text-gfg-green hover:bg-[#f1f8f5]'
+                        `px-4 py-2 rounded-lg font-source font-semibold transition-all duration-200 flex items-center gap-1 ${isActive ? 'text-gfg-green bg-[#f1f8f5]' : 'text-gfg-black hover:text-gfg-green hover:bg-[#f1f8f5]'
                         }`
                       }
                       onClick={() => {
@@ -110,7 +108,7 @@ const Navbar = () => {
                       {link.name}
                     </NavLink>
 
-                 
+
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -129,8 +127,7 @@ const Navbar = () => {
                   <NavLink
                     to={link.href}
                     className={({ isActive }) =>
-                      `px-4 py-2 rounded-lg font-source font-semibold transition-all duration-200 flex items-center gap-1 ${
-                        isActive ? 'text-gfg-green bg-[#f1f8f5]' : 'text-gfg-black hover:text-gfg-green hover:bg-[#f1f8f5]'
+                      `px-4 py-2 rounded-lg font-source font-semibold transition-all duration-200 flex items-center gap-1 ${isActive ? 'text-gfg-green bg-[#f1f8f5]' : 'text-gfg-black hover:text-gfg-green hover:bg-[#f1f8f5]'
                       }`
                     }
                   >
@@ -140,7 +137,7 @@ const Navbar = () => {
 
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-100 animate-fadeIn">
-                   
+
                     <NavLink
                       to={link.href}
                       className="block px-4 py-2 text-sm font-source text-gfg-navy hover:bg-[#f7faf8]"
@@ -155,8 +152,7 @@ const Navbar = () => {
                           key={idx}
                           to={item.to}
                           className={({ isActive }) =>
-                            `block px-4 py-2 font-source text-gfg-black hover:bg-[#f1f8f5] hover:text-gfg-green transition-colors ${
-                              isActive ? 'text-gfg-green' : ''
+                            `block px-4 py-2 font-source text-gfg-black hover:bg-[#f1f8f5] hover:text-gfg-green transition-colors ${isActive ? 'text-gfg-green' : ''
                             }`
                           }
                           onClick={() => setActiveDropdown(null)}
@@ -171,7 +167,7 @@ const Navbar = () => {
             ))}
           </div>
 
-         
+
           <div className="hidden lg:flex items-center space-x-4">
             <button
               onClick={() => navigate('https://chat.whatsapp.com/JXUbInxZza2Cno35TdSyjT?mode=hqrt1')}
@@ -181,7 +177,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          
+
           <button
             onClick={() => {
               setIsOpen(!isOpen);

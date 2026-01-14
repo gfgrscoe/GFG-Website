@@ -23,8 +23,8 @@ const Contact = () => {
 
 
     <Helmet>
-    <title>Contact Us - GeeksforGeeks Student Chapter @ RSCOE</title>
-    <meta name="description" content="Get in touch with the GeeksforGeeks Student Chapter at RSCOE. Whether you have questions, want to collaborate, or just want to say hi, we're here to connect!" />
+        <title>Contact Us - GeeksforGeeks Campus Body @ RSCOE</title>
+        <meta name="description" content="Get in touch with the GeeksforGeeks Campus Body at RSCOE. Whether you have questions, want to collaborate, or just want to say hi, we're here to connect!" />
     </Helmet>
 
     // Form state
@@ -76,16 +76,16 @@ const Contact = () => {
         }
     };
 
-     useEffect(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, []);
-    
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     const collegeLocation = {
         name: 'Rajarshi Shahu College of Engineering (RSCOE)',
         address: 'Tathawade, Pune, Maharashtra 411033',
         coordinates: {
-            lat: 18.6200922,  
-            lng: 73.7471974  
+            lat: 18.6200922,
+            lng: 73.7471974
         },
         mapUrl: 'https://www.google.com/maps/place/JSPM+Rajarshi+Shahu+College+Of+Engineering+,+Tathawade/@18.6200922,73.7471974,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bbbc138acb7b:0x67043867a211a31d!8m2!3d18.6200922!4d73.7471974!16s%2Fg%2F11fly22nwc?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D' // UPDATE with actual Google Maps link
     };
@@ -121,14 +121,14 @@ const Contact = () => {
         }
     ];
 
-    
+
     const socialLinks = [
         { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/gfg.rscoe/?igsh=MTJtYWQ2eHVmYW8wdw%3D%3D#', color: 'hover:text-pink-600' },
         { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/company/geeksforgeeksrscoe/', color: 'hover:text-blue-600' },
         { icon: Facebook, name: 'Facebook', url: 'https://www.facebook.com/people/GfGRSCOE/61551517804739/', color: 'hover:text-blue-700' }
     ];
 
-  
+
     const faqs = [
         {
             question: 'How can I join the chapter?',
@@ -147,7 +147,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
-           
+
             <section className="pt-32 pb-12 px-4 sm:px-6 relative overflow-hidden">
                 <div className="absolute top-20 right-10 w-72 h-72 bg-gfg-green/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-10 left-10 w-96 h-96 bg-gfg-ocean/10 rounded-full blur-3xl"></div>
@@ -167,7 +167,7 @@ const Contact = () => {
                 </div>
             </section>
 
-          
+
             <section className="py-12 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -193,7 +193,7 @@ const Contact = () => {
                 </div>
             </section>
 
-         
+
             <section className="py-12 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ const Contact = () => {
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
-                             
+
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Full Name *
@@ -279,7 +279,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                              
+
                                 <div>
                                     <label className="block font-source font-semibold text-gray-700 mb-2">
                                         Your Message *
@@ -295,7 +295,7 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                              
+
                                 <button
                                     type="submit"
                                     disabled={formStatus.loading}

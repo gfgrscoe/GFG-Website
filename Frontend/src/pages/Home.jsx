@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import { 
-    Code, 
-    Users, 
-    Trophy, 
-    Rocket, 
+import {
+    Code,
+    Users,
+    Trophy,
+    Rocket,
     Calendar,
     ArrowRight,
     Award,
     ImageIcon
 } from 'lucide-react';
-import logo from '../assets/logo.png'; 
-import researchIcon from '../assets/Reserachpaper.jpg'; 
+import logo from '../assets/logo.png';
+import researchIcon from '../assets/Reserachpaper.jpg';
 import workshopIcon from '../assets/3dworkshop.jpg';
-import greIcon from '../assets/gre.jpg'; 
+import greIcon from '../assets/gre.jpg';
 import { useNavigate } from 'react-router';
-import GreenByteSection from '../components/GreenByteSection.jsx'; 
-import {Helmet} from "react-helmet";
+import GreenByteSection from '../components/GreenByteSection.jsx';
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
 
     <Helmet>
-    <title>GeeksforGeeks Student Chapter - Home</title>
-    <meta name="description" content="Welcome to the official GeeksforGeeks Student Chapter. Join 100+ passionate coders, attend workshops, compete in hackathons, and build projects that matter." />
+        <title>GeeksforGeeks Campus Body - Home</title>
+        <meta name="description" content="Welcome to the official GeeksforGeeks Campus Body. Join 100+ passionate coders, attend workshops, compete in hackathons, and build projects that matter." />
     </Helmet>
 
 
@@ -71,21 +71,21 @@ const Home = () => {
 
     return (
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
-          
+
             <section className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                        
+
                         <div className="space-y-4 md:space-y-6 order-2 lg:order-1 text-center lg:text-left">
                             <h1 className="font-sofia font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-gfg-black leading-tight">
-                                GeeksForGeeks 
+                                GeeksForGeeks
                                 <span className="block bg-linear-to-r from-gfg-green via-gfg-ocean to-gfg-navy bg-clip-text text-transparent">
-                                    Student Chapter
+                                    Campus Body
                                 </span>
                             </h1>
 
                             <p className="font-source text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                                Welcome to the official GeeksforGeeks Student Chapter. Join 100+ passionate coders, 
+                                Welcome to the official GeeksforGeeks Campus Body. Join 100+ passionate coders,
                                 attend workshops, compete in hackathons, and build projects that matter.
                             </p>
 
@@ -94,7 +94,7 @@ const Home = () => {
                                     Join Our Community
                                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
-                                <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-gfg-green text-gfg-green font-sofia font-semibold rounded-xl hover:bg-gfg-green hover:text-white transition-all flex items-center justify-center gap-2" 
+                                <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-gfg-green text-gfg-green font-sofia font-semibold rounded-xl hover:bg-gfg-green hover:text-white transition-all flex items-center justify-center gap-2"
                                     onClick={() => navigate('/events')}>
                                     <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                                     View Events
@@ -105,17 +105,17 @@ const Home = () => {
                         <div className="flex justify-center lg:justify-end order-1 lg:order-2">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-linear-to-r from-gfg-green via-gfg-ocean to-gfg-navy rounded-full blur-2xl md:blur-3xl opacity-30 animate-pulse"></div>
-                                
-                                <div 
+
+                                <div
                                     className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-linear-to-br from-gfg-green to-gfg-ocean rounded-full p-6 sm:p-8 shadow-2xl transition-transform duration-700 ease-in-out cursor-pointer"
                                     style={{ transform: isLogoHovered ? 'rotate(360deg)' : 'rotate(0deg)' }}
                                     onMouseEnter={() => setIsLogoHovered(true)}
                                     onMouseLeave={() => setIsLogoHovered(false)}
                                 >
                                     <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-inner p-4 sm:p-6">
-                                        <img 
-                                            src={logo} 
-                                            alt="GfG Logo" 
+                                        <img
+                                            src={logo}
+                                            alt="GfG Logo"
                                             className="w-full h-full object-contain"
                                         />
                                     </div>
@@ -135,7 +135,7 @@ const Home = () => {
                         {stats.map((stat, idx) => {
                             const Icon = stat.icon;
                             return (
-                                <div 
+                                <div
                                     key={idx}
                                     className="group bg-white rounded-xl md:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 cursor-pointer border border-gray-100"
                                 >
@@ -151,7 +151,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <GreenByteSection/>
+            <GreenByteSection />
 
             <section className="py-12 md:py-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
@@ -168,12 +168,12 @@ const Home = () => {
                         {whyJoinReasons.map((reason, idx) => {
                             const Icon = reason.icon;
                             return (
-                                <div 
+                                <div
                                     key={idx}
                                     className="group relative bg-white rounded-xl md:rounded-2xl p-5 sm:p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100"
                                 >
                                     <div className={`absolute inset-0 bg-linear-to-br ${reason.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-                                    
+
                                     <div className="relative z-10">
                                         <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br ${reason.color} rounded-lg md:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
                                             <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
@@ -205,16 +205,16 @@ const Home = () => {
 
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                         {galleryImages.map((image) => (
-                            <div 
+                            <div
                                 key={image.id}
                                 className="group relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 cursor-pointer h-64 sm:h-72 md:h-80"
                             >
-                                <img 
-                                    src={image.pic} 
+                                <img
+                                    src={image.pic}
                                     alt={image.title}
                                     className="w-full h-full object-cover"
                                 />
-                                
+
                                 <div className="absolute inset-0 bg-linear-to-t from-gfg-black/80 via-gfg-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                                     <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
                                         <span className="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 bg-gfg-green text-white text-xs font-sofia font-bold rounded-full mb-1.5 sm:mb-2">
@@ -230,7 +230,7 @@ const Home = () => {
                     </div>
 
                     <div className="text-center mt-8 md:mt-10">
-                        <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-gfg-ocean text-white font-sofia font-semibold rounded-xl hover:bg-gfg-green transform hover:scale-105 transition-all shadow-lg flex items-center gap-2 mx-auto text-sm sm:text-base" 
+                        <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-gfg-ocean text-white font-sofia font-semibold rounded-xl hover:bg-gfg-green transform hover:scale-105 transition-all shadow-lg flex items-center gap-2 mx-auto text-sm sm:text-base"
                             onClick={() => navigate('/events')}>
                             View Full Gallery
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />

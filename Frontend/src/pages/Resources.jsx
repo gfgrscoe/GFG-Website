@@ -14,12 +14,12 @@ const Resources = () => {
 
 
     <Helmet>
-    <title>Resources & Roadmaps - GeeksforGeeks Student Chapter @ RSCOE</title>
-    <meta name="description" content="Discover curated resources and comprehensive roadmaps from the GeeksforGeeks Student Chapter at RSCOE. Master Data Structures, Web Development, Competitive Programming, App Development, and more with our expertly crafted learning paths." />
+        <title>Resources & Roadmaps - GeeksforGeeks Campus Body @ RSCOE</title>
+        <meta name="description" content="Discover curated resources and comprehensive roadmaps from the GeeksforGeeks Campus Body at RSCOE. Master Data Structures, Web Development, Competitive Programming, App Development, and more with our expertly crafted learning paths." />
     </Helmet>
 
     const [activeTab, setActiveTab] = useState('DSA');
-    const [viewMode, setViewMode] = useState('resources'); 
+    const [viewMode, setViewMode] = useState('resources');
     const location = useLocation();
 
     useEffect(() => {
@@ -63,7 +63,7 @@ const Resources = () => {
         <div className="min-h-screen bg-linear-to-br from-white via-gfg-gray to-[#f1f8f5]">
 
             <section className="pt-32 pb-16 px-4 sm:px-6 relative overflow-hidden">
-              
+
                 <div className="absolute top-20 right-10 w-96 h-96 bg-gfg-green/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-10 left-10 w-80 h-80 bg-gfg-ocean/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
@@ -95,8 +95,8 @@ const Resources = () => {
                                     key={category.id}
                                     onClick={() => setActiveTab(category.id)}
                                     className={`group relative p-4 rounded-2xl transition-all duration-300 ${isActive
-                                            ? 'bg-linear-to-r ' + category.color + ' text-white shadow-2xl shadow-gfg-green/30 scale-105'
-                                            : 'bg-white hover:bg-gray-50 text-gray-700 shadow-md hover:shadow-lg'
+                                        ? 'bg-linear-to-r ' + category.color + ' text-white shadow-2xl shadow-gfg-green/30 scale-105'
+                                        : 'bg-white hover:bg-gray-50 text-gray-700 shadow-md hover:shadow-lg'
                                         }`}
                                 >
                                     <div className="flex flex-col items-center gap-2 text-center">
@@ -123,8 +123,8 @@ const Resources = () => {
                             <button
                                 onClick={() => setViewMode('resources')}
                                 className={`px-4 py-2 rounded-lg font-sofia font-semibold text-sm transition-all ${viewMode === 'resources'
-                                        ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg'
-                                        : 'text-gray-600 hover:bg-gray-50'
+                                    ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg'
+                                    : 'text-gray-600 hover:bg-gray-50'
                                     }`}
                             >
                                 Resources
@@ -132,8 +132,8 @@ const Resources = () => {
                             <button
                                 onClick={() => setViewMode('roadmap')}
                                 className={`px-4 py-2 rounded-lg font-sofia font-semibold text-sm transition-all ${viewMode === 'roadmap'
-                                        ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg'
-                                        : 'text-gray-600 hover:bg-gray-50'
+                                    ? 'bg-linear-to-r from-gfg-green to-gfg-ocean text-white shadow-lg'
+                                    : 'text-gray-600 hover:bg-gray-50'
                                     }`}
                             >
                                 Roadmap

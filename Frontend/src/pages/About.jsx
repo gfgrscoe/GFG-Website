@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { 
-    Code, 
-    Users, 
-    Target, 
+import {
+    Code,
+    Users,
+    Target,
     Award,
     Zap,
     BookOpen,
@@ -23,13 +23,13 @@ import { Helmet } from 'react-helmet';
 const About = () => {
 
     <Helmet>
-    <title>About Us - GeeksforGeeks Student Chapter @ RSCOE</title>
-    <meta name="description" content="Learn about the GeeksforGeeks Student Chapter at RSCOE, our vision, mission, core values, and journey in building a community of passionate developers." />
+        <title>About Us - GeeksforGeeks Campus Body @ RSCOE</title>
+        <meta name="description" content="Learn about the GeeksforGeeks Campus Body at RSCOE, our vision, mission, core values, and journey in building a community of passionate developers." />
     </Helmet>
 
-     useEffect(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
 
     const visionStatement = "To build a future-ready student developer community by fostering excellence in problem-solving, modern software development, and collaborative learning.";
 
@@ -102,7 +102,7 @@ const About = () => {
     ];
 
     const milestones = [
-        { year: '2023', event: 'Chapter Established', description: 'Official GfG Student Chapter launched at RSCOE' },
+        { year: '2023', event: 'Chapter Established', description: 'Official GfG Campus Body launched at RSCOE' },
         { year: '2024', event: '50+ Members', description: 'Growing community of passionate developers' },
         { year: '2024', event: '5+ Events', description: 'Successfully conducted workshops and competitions' },
         { year: '2025', event: '10+ Events', description: 'Successfully conducted workshops and competitions' }
@@ -116,7 +116,7 @@ const About = () => {
                 <div className="absolute bottom-10 left-10 w-96 h-96 bg-gfg-ocean/10 rounded-full blur-3xl"></div>
 
                 <div className="max-w-5xl mx-auto text-center relative z-10">
-                  
+
 
                     <h1 className="font-sofia font-bold text-4xl sm:text-5xl lg:text-6xl text-gfg-black mb-6 leading-tight">
                         Building the Next Generation of
@@ -126,7 +126,7 @@ const About = () => {
                     </h1>
 
                     <p className="font-source text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        We are the official GeeksforGeeks Student Chapter at RSCOE, dedicated to fostering 
+                        We are the official GeeksforGeeks Campus Body at RSCOE, dedicated to fostering
                         a vibrant community of passionate coders, innovators, and problem solvers.
                     </p>
                 </div>
@@ -147,17 +147,17 @@ const About = () => {
 
                             <div className="space-y-4 font-source text-gray-600 leading-relaxed">
                                 <p>
-                                    <strong className="text-gfg-green">GeeksforGeeks</strong> is a leading platform 
-                                    providing computer science resources and coding solutions. Founded to help students 
+                                    <strong className="text-gfg-green">GeeksforGeeks</strong> is a leading platform
+                                    providing computer science resources and coding solutions. Founded to help students
                                     and working professionals excel in technical interviews and programming competitions.
                                 </p>
                                 <p>
-                                    With <strong>millions of users worldwide</strong>, GfG offers tutorials, practice 
-                                    problems, interview experiences, and competitive programming content across various 
+                                    With <strong>millions of users worldwide</strong>, GfG offers tutorials, practice
+                                    problems, interview experiences, and competitive programming content across various
                                     domains including DSA, Web Development, Machine Learning, and System Design.
                                 </p>
                                 <p>
-                                    The <strong>GfG Student Chapter Program</strong> extends this mission to college 
+                                    The <strong>GfG Campus Body Program</strong> extends this mission to college
                                     campuses, empowering students through community-driven learning and skill development.
                                 </p>
                             </div>
@@ -189,7 +189,7 @@ const About = () => {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="font-sofia font-bold text-3xl sm:text-4xl lg:text-5xl text-gfg-black mb-4">
-                            GfG Student Chapter @ RSCOE
+                            GfG Campus Body @ RSCOE
                         </h2>
                         <p className="font-source text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                             Rajarshi Shahu College of Engineering's official GeeksforGeeks community
@@ -200,9 +200,9 @@ const About = () => {
                         <div className="grid md:grid-cols-3">
                             {[
                                 {
-                        
+
                                     title: 'Who We Are',
-                                    description: 'Official GfG Student Chapter at RSCOE, Pune, bringing together coding enthusiasts from all departments to learn, build, and grow together.',
+                                    description: 'Official GfG Campus Body at RSCOE, Pune, bringing together coding enthusiasts from all departments to learn, build, and grow together.',
                                     color: 'bg-gfg-green'
                                 },
                                 {
@@ -218,7 +218,7 @@ const About = () => {
                             ].map((item, idx) => {
                                 return (
                                     <div key={idx} className="p-8 hover:bg-linear-to-br hover:from-gray-50 hover:to-white transition-all group">
-                                        
+
                                         <h3 className="font-sofia font-bold text-xl text-gfg-black mb-3">{item.title}</h3>
                                         <p className="font-source text-gray-600 leading-relaxed">{item.description}</p>
                                     </div>
@@ -275,7 +275,7 @@ const About = () => {
                         {coreValues.map((value, idx) => {
                             const Icon = value.icon;
                             return (
-                                <div 
+                                <div
                                     key={idx}
                                     className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-gray-100"
                                 >
@@ -295,7 +295,7 @@ const About = () => {
                 </div>
             </section>
 
-         
+
             <section className="py-20 px-4 sm:px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
