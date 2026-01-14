@@ -59,6 +59,8 @@ router.get("/latest", async (req, res) => {
       return res.status(404).json({ success: false, message: "No concept found" });
     }
 
+   
+
     // shape it like your currentWeekConcept object if you want:
     const currentWeekConcept = {
       week: concept.week,
@@ -70,6 +72,8 @@ router.get("/latest", async (req, res) => {
       code: concept.code,
       resources: concept.resources, // array of {label, link}
     };
+
+    console.log(currentWeekConcept)
 
     res.json({ success: true, data: currentWeekConcept });
   } catch (err) {
