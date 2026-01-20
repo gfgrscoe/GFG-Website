@@ -170,10 +170,10 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center space-x-4">
             <button
-              onClick={() => navigate('https://chat.whatsapp.com/JXUbInxZza2Cno35TdSyjT?mode=hqrt1')}
+              onClick={() => navigate('https://forms.gle/7j43rR6kLHJr3DoK9')}
               className="px-6 py-2.5 bg-gfg-green text-white font-sofia font-semibold rounded-lg hover:bg-gfg-ocean transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Join Community
+              Register to ASCENT
             </button>
           </div>
 
